@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bhanu Collge</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  </head>
+  <body
+    class=" relative bg-gradient-to-t from-[#328E6E] to-[#4D55CC] h-screen min-h-screen text-sm"
+  >
+<header class="bg-white shadow-sm absolute w-full">
+    <nav class=" flex justify-between mx-auto ">
+      <!-- logo -->
+      <div class=" flex items-center gap-5 " >
+        <img src="/bhanu-logo.png  " class="w-14" alt="college Logo" />
+        <p class="">Bhanu College Biratnagar-09,Nepal</p>
+      </div>
+      <!-- nav  -->
+      <div class=" hidden  md:flex items-center " id="main-menu">
+            <ul class=" flex justify-center gap-9 mx-4 px-6" id="ulNav">
+          <li>
+            <a href=""  class="hover:bg-amber-400 p-2.5 " > Home</a>
+          </li>
+          <li class="relative cursor-pointer  ">
+            <a class="hover:bg-amber-400  p-2.5" id="programList"> Programs</a>
+            <ion-icon name="chevron-down-outline" id="programList1"></ion-icon>
+           
+            <div class="hidden absolute left-20 top-full w-fit bg-white  " id="list">
+              <ul class=" ">
+                <li >
+                  <a href="" class="hover:bg-amber-200  ">Science</a>
+                </li>
+                <li >
+                  <a href="" class="hover:bg-amber-200  ">Computer Science</a>
+                </li>
+                <li >
+                  <a href="" class="hover:bg-amber-200  ">Management</a>
+                </li>
+                <li >
+                  <a href="" class="hover:bg-amber-200 ">Education</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="" class="hover:bg-amber-400 p-2.5 "> Gallery</a>
+          </li>
+          <li>
+            <a href="" class="hover:bg-amber-400 p-2.5"> About Us</a>
+          </li>
+          <li>
+            <a href="" class="hover:bg-amber-400 p-2.5"> Contact Us</a>
+          </li>
+        </ul>
+    
+      </div>
+     <div class="flex items-center gap-3 justify-center" > 
+      <button>
+        <ion-icon id="toggleMenu" name="menu-outline" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+        
+     </div>
+
+      </button>
+       
+    </nav>
+
+  </header>
+  <section class="hero-section">
+    
+    <div id="main" class="flex h-full justify-center bg-amber-700">
+      <img src="./public/entrance.jpg" class="bg-cover">
+
+    </div>
+
+  </section>
+
+    <div id="footer"></div>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+
+  </body>
+</html>
