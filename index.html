@@ -5,66 +5,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bhanu Collge</title>
     <link rel="stylesheet" href="./src/output.css" />
+    <style>
+  header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  /* background-color: white; */
+  z-index: -1;
+  transition: width 0.6s ease-in-out;
+  transform-origin: left;
+}
+
+header.bg-white::before {
+  width: 100%;
+}
+    </style>
     <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
     <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
 />
   </head>
+
   <body
     class="   h-screen min-h-screen text-sm"
   >
 
-<header class="  fixed top-0 left-0 z-50 w-full" id="header">
-    <nav class=" flex justify-between mx-auto  text-white " id="nav">
+<header class="fixed top-0 left-0 z-50 w-full text-white " id="header">
+    <nav class=" flex justify-between mx-auto  " id="nav">
       <!-- logo -->
       <div class=" flex items-center gap-5 " >
-        <img src="/images/bhanu-logo.png  " class="w-14" alt="college Logo" />
+
+        <img src="./public/images/reworked-logo.png  " class="w-14" id="collegeLogo" />
+
+
         <p class="">Bhanu College Biratnagar-09,Nepal</p>
+
       </div>
+
       <!-- nav  -->
       <div class=" hidden  md:flex items-center " id="main-menu">
+
             <ul class=" flex justify-center gap-9 mx-4 px-6" id="ulNav">
+
           <li>
-            <a href=""  class="hover:bg-amber-400 p-2.5 " > Home</a>
+
+
+            <a href=""  class="hover:text-amber-400 p-2.5 " > Home</a>
+
           </li>
+
           <li class="relative cursor-pointer  ">
-            <a class="hover:bg-amber-400  p-2.5" id="programList"> Programs</a>
+
+            <a class="hover:text-amber-400 p-2.5" id="programList"> Programs</a>
+
             <ion-icon name="chevron-down-outline" id="programListIcon"></ion-icon>
-           
-            <div class="hidden absolute left-20 top-full w-fit bg-white  " id="list">
-              <ul class=" ">
+            
+            <div class="hidden absolute left-20 top-full w-fit  " id="list">
+
+              <ul class="" id="faculty">
+
                 <li >
-                  <a href="" class="hover:bg-amber-200  ">Science</a>
+
+                  <a href="" class="hover:text-amber-400 ">Science</a>
+                  <hr/>
+
                 </li>
+
                 <li >
-                  <a href="" class="hover:bg-amber-200  ">Computer Science</a>
+
+                  <a href="" class="hover:text-amber-400  ">Computer Science</a>
+                  <hr/>
+
                 </li>
+
                 <li >
-                  <a href="" class="hover:bg-amber-200  ">Management</a>
+
+                  <a href="" class="hhover:text-amber-400 ">Management</a>
+                  <hr/>
+
                 </li>
+
                 <li >
-                  <a href="" class="hover:bg-amber-200 ">Education</a>
+
+                  <a href="" class="hover:text-amber-400 ">Education</a>
+                  <hr/>
                 </li>
+
               </ul>
+
             </div>
+
           </li>
+
           <li>
-            <a href="" class="hover:bg-amber-400 p-2.5 "> Gallery</a>
+
+            <a href="" class="hover:text-amber-400 p-2.5 "> Gallery</a>
+
           </li>
+
           <li>
-            <a href="" class="hover:bg-amber-400 p-2.5"> About Us</a>
+
+            <a href="" class="hover:text-amber-400 p-2.5"> About Us</a>
+
           </li>
+
           <li>
-            <a href="" class="hover:bg-amber-400 p-2.5"> Contact Us</a>
+
+            <a href="" class="hover:text-amber-400 p-2.5"> Contact Us</a>
+
           </li>
+
         </ul>
+
     
+
       </div>
+
      <div class="flex items-center gap-3 justify-center" > 
+
       <button>
+        
         <ion-icon id="toggleMenu" name="menu-outline" class="text-3xl text-black cursor-pointer md:hidden"></ion-icon>
+
         
      </div>
 
@@ -75,31 +144,114 @@
   </header>
   
      <!-- Swiper -->
-  <div class="swiper mySwiper relative h-screen w-full">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide bg-[url('/images/entrance2.jpg')] bg-cover bg-center h-screen w-full">Slide 1
-         <!-- <img src="./public/entrance.jpg" class=" "> -->
+  <div class="swiper mySwiper relative h-screen w-full ">
+
+    <div class="swiper-wrapper ">
+      <!-- 1st slide  -->
+      <div class="swiper-slide bg-[url('/images/entrance2.jpg')] bg-cover  h-screen w-full flex items-center justify-center flex-col my-auto py-6 md:py-8">
+          <!-- slide contents -->
+          <div class="absolute inset-0 bg-opacity-30 backdrop-blur-[1px] items-center left-0 top-[40%]"> 
+    
+                <h2 class="text-xl md:text-2xl font-medium mb-2 text-amber-400 "> Building Tomorrow's Leaders Today</h2>
+                <h1 
+                class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white"
+                >
+                Excellence in Education
+                </h1>
+                <p 
+                class="text-lg md:text-xl mb-2 max-w-2xl text-white"
+                >
+                Experience world-class education with our renowned faculty and innovative programs.
+              </p>
+          
+               <div class="flex flex-col sm:flex-row gap-4">
+                 <a
+                     href="#"
+                     class="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-md font-medium transition-colors inline-flex items-center justify-center group"
+                       >
+                      Schedule a Visit
+                      <ChevronRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                      </a>
+                   <a
+                      href="#"
+                      class="bg-white hover:bg-gray-100 text-gray-900 px-6 py-3 rounded-md font-medium transition-colors inline-flex items-center justify-center group"
+                      >
+                    Explore Programs
+                   <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </div>
+    
+          </div>
+      
+       
       </div>
-      <div class="swiper-slide bg-[url('/images/hall.jpg')] bg-cover bg-center h-screen w-full">Slide 2
-        <!-- <img src="./public/entrance.jpg" class=" "> -->
+      <!-- 2nd slide -->
+      <div class="swiper-slide bg-[url('/images/hall.jpg')] bg-cover bg-center h-screen w-full">
+        
       </div>
-      <div class="swiper-slide bg-[url('/images/graduate.jpg')] bg-cover bg-center h-screen w-full ">Slide 3
-        <!-- <img src="./public/entrance.jpg" class=" "> -->
+      <!-- 3rd slide  -->
+      <div class="swiper-slide bg-[url('/images/graduate.jpg')] bg-cover bg-center h-screen w-full ">
+       
       </div>
     </div>
- <div class="flex absolute justify-center mt-4 space-x-3">
-  <button class="w-3 h-3 rounded-full bg-black" onclick="swiper.slideTo(0)" > hello</button>
-  <button class="w-3 h-3 rounded-full bg-gray-400" onclick="swiper.slideTo(1)"></button>
-  <button class="w-3 h-3 rounded-full bg-blue-500" onclick="swiper.slideTo(2)"></button>
-</div>  
-  </div>
+    
 
+  </div>
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Academic Programs
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Discover our wide range of undergraduate and graduate programs designed to prepare you for success in your chosen field.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+           
+            class="rounded-xl shadow-md hover:shadow-xl transition-shadow group overflow-hidden "
+          >
+            <div class="p-8">
+              <div class="mb-4">{program.icon}</div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">
+                
+              </h3>
+              <p class="text-gray-600 mb-6">
+                {program.description}
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">
+                  {program.courses} courses
+                </span>
+
+              </div>
+            </div>
+          </div>
+      </div>
+
+    </div>
+  </section>
+<section class="bg-white py-20">
+
+</section>
+  <div class="text-center mb-16">
+    <h1>
+      Academic Programs
+     </h1>
+     <p>
+      Discover our wide range of undergraduate and graduate programs designed to prepare you for success in your chosen field
+     </p>
+  </div>
 
     <div id="footer">
       <div>
         <img src="/images/entrance.jpg" alt="">
       </div> </div>
-    <div id="app"></div>
+    <div id="app">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id cumque expedita ad dolorem, adipisci laborum perferendis sit iste tempora alias dicta at consequatur, dignissimos nulla tenetur amet magnam aut animi non fugit quidem inventore ipsum dolore sunt. Nihil dignissimos minus nisi aliquam natus illo illum saepe quisquam ipsa voluptas, eum mollitia ipsam ea sequi architecto provident, iste blanditiis veritatis, ullam dolor modi voluptatibus perspiciatis numquam ad? Provident fugit ipsum, sunt tempora qui ab hic eaque praesentium earum quam suscipit? Distinctio dolores alias ducimus dolorum. Enim provident, rerum maxime quas eveniet neque accusantium nostrum libero error, obcaecati numquam, cumque natus beatae aliquid possimus voluptas inventore quos laborum dolorum! At, accusantium laboriosam? Dignissimos tempora optio perferendis enim fugiat? Mollitia vero, reprehenderit soluta doloribus corrupti sed esse illo sint odit sequi cumque minus, obcaecati tempora dolore, ea veritatis ducimus. Officiis, fugiat? Voluptates laudantium, cupiditate odio sed tempora corporis placeat tenetur expedita. Tempora, esse.</p>
+    </div>
     <script type="module" src="/src/main.js"></script>
      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
