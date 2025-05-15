@@ -1,6 +1,32 @@
 // import './style.css'
 import "./output.css";
 
+import { initGallery } from "./js/gallery.js";
+import { initTestimonials } from "./js/testimonials.js";
+import { initCounters } from "./js/counters.js";
+import { initContactForm } from "./js/contact.js";
+
+// Initialize components when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  
+  // Initialize image gallery
+  // initGallery();
+  
+  // Initialize testimonials carousel
+  initTestimonials();
+  
+  // Initialize stats counters
+  // initCounters();
+  
+  // Initialize contact form
+  // initContactForm();
+  
+  // Initialize current year for footer
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+});
+
+
+
 const menu = document.getElementById("main-menu");
 const nav = document.getElementById("ulNav");
 // const navLi=document.getElementsByClassName('list-item')
@@ -53,7 +79,7 @@ var swiper = new Swiper(".mySwiper", {
   loop: true,
   centeredSlides: true,
   autoplay: {
-    delay: 552700,
+    delay: 2700,
     disableOnInteraction: false,
   },
 });
@@ -114,16 +140,30 @@ document.addEventListener("scroll", () => {
     window.addEventListener("resize", updateCarousel);
   });
 
+  document.addEventListener("DOMContentLoaded", function () {
+    new Swiper(".swiper.students", {
+      // Swiper automatically detects Navigation/Pagination from CDN
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  });
 
-  var swiper = new Swiper(".Students", {
-    cssMode: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-    },
-    mousewheel: true,
-    keyboard: true,
+
+  document.querySelector("form").addEventListener("submit", function (e) {
+    const emailInput = this.querySelector('input[type="email"]');
+
+    if (!emailInput.value.includes("@")) {
+      e.preventDefault();
+      emailInput.classList.add("border-red-500");
+      alert("Please enter a valid email address");
+    }
   });
